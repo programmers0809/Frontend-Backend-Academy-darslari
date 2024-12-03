@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML 5-dars: Formalar</title>
+  <style>
+      body {
+          font-family: 'Arial', sans-serif;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          margin: 0;
+          background-color: #f4f7fc;
+      }
+
+      .form-container {
+          width: 350px;
+          padding: 30px;
+          border-radius: 15px;
+          background-color: #ffffff;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          text-align: center;
+      }
+
+      h1 {
+          color: #4A90E2;
+          font-size: 24px;
+          margin-bottom: 20px;
+      }
+
+      label {
+          display: block;
+          text-align: left;
+          margin-top: 10px;
+          color: #333;
+          font-size: 14px;
+      }
+
+      input, select, textarea {
+          width: 100%;
+          padding: 10px;
+          margin-top: 8px;
+          margin-bottom: 15px;
+          border-radius: 8px;
+          border: 1px solid #ccc;
+          font-size: 14px;
+      }
+
+      input[type="submit"] {
+          background-color: #4A90E2;
+          color: white;
+          border: none;
+          cursor: pointer;
+          font-size: 16px;
+          font-weight: bold;
+          padding: 12px;
+          border-radius: 8px;
+          transition: background-color 0.3s ease;
+      }
+
+      input[type="submit"]:hover {
+          background-color: #357ABD;
+      }
+
+      .radio-group, .checkbox-group {
+          display: flex;
+          justify-content: space-between;
+          margin-top: 10px;
+      }
+
+      .radio-group label, .checkbox-group label {
+          font-size: 14px;
+          color: #555;
+      }
+
+      .textarea-container {
+          margin-top: 15px;
+          text-align: left;
+      }
+
+      .footer-text {
+          font-size: 12px;
+          color: #777;
+          margin-top: 20px;
+      }
+
+      .footer-text a {
+          color: #4A90E2;
+          text-decoration: none;
+      }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h1>Ro'yhatdan o'tish</h1>
+    <form action="your-server-endpoint" method="POST">
+      <label for="username">Foydalanuvchi nomi:</label>
+      <input type="text" id="username" name="username" required><br>
+
+      <label for="password">Parol:</label>
+      <input type="password" id="password" name="password" required><br>
+
+      <div class="radio-group">
+        <label><input type="radio" id="male" name="gender" value="male"> Erkak</label>
+        <label><input type="radio" id="female" name="gender" value="female"> Ayol</label>
+      </div>
+
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="subscribe" value="yes"> Yangiliklar obunasi</label>
+      </div>
+
+      <div class="textarea-container">
+        <label for="message">Xabar:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+      </div>
+
+      <label for="country">Mamlakat:</label>
+      <select id="country" name="country" required>
+        <option value="uzbekistan">O'zbekiston</option>
+        <option value="usa">AQSh</option>
+        <option value="russia">Rossiya</option>
+      </select><br>
+
+      <input type="submit" value="Yuborish">
+    </form>
+
+    <div class="footer-text">
+      <p>© 2024 Your Website | <a href="./index.html">Login</a></p>
+    </div>
+  </div>
+
+</body>
+</html>
