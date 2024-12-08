@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image va Label Bosganda</title>
+    <style>
+        /* CSS kodlari */
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .label-button {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        img {
+            margin-top: 20px;
+            width: 300px;
+            height: auto;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <label for="image1" class="label-button">Label 1</label>
+        <img src="image1.jpg" id="image1" class="hidden" alt="Image 1">
+
+        <label for="image2" class="label-button">Label 2</label>
+        <img src="image2.jpg" id="image2" class="hidden" alt="Image 2">
+    </div>
+
+    <script>
+        // JavaScript kodlari
+        document.querySelectorAll('.label-button').forEach((label, index) => {
+            label.addEventListener('click', () => {
+                const image = document.getElementById(`image${index + 1}`);
+                document.querySelectorAll('img').forEach(img => img.classList.add('hidden')); // Hamma rasmlarni yashirish
+                image.classList.remove('hidden'); // Faqat bosilgan rasmni ko'rsatish
+            });
+        });
+    </script>
+</body>
+</html>
